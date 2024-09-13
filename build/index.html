@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <script src="js/main.js" defer></script>
   </head>
   <body class="min-h-screen bg-red-500 dark:bg-black dark:text-white">
     <header class="bg-teal-500 text-white sticky top-0 z-10">
@@ -17,15 +18,47 @@
           <a href="#hero">🚀 Acme Rockets</a>
         </h1>
         <button
-          id="mobile-open-button"
-          class="text-3xl sm:hidden focus:outline-none"
+          type="button"
+          id="hamburger-button"
+          class="text-3xl md:hidden focus:outline-none cursor-pointer relative w-8 h-8"
         >
-          &#9776;
+          <!-- &#9776; -->
+          <div
+            class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:transition-all before:duration-500 before:absolute before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:transition-all after:duration-500 after:absolute after:-translate-x-4 after:translate-y-3"
+          ></div>
         </button>
-        <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+        <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
           <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
           <a href="#testimonials" class="hover:opacity-90">testimonials</a>
           <a href="#contact" class="hover:opacity-90">Contact</a>
+        </nav>
+      </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
+      >
+        <!-- <button type="button" class="text-8xl self-end px-6">&times;</button> -->
+        <nav
+          class="flex flex-col min-h-screen items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-60"
+            >Home</a
+          >
+          <a href="#rockets" class="w-full text-center py-6 hover:opacity-60"
+            >Rockets</a
+          >
+          <a
+            href="#testimonials"
+            class="w-full text-center py-6 hover:opacity-60"
+            >Testimonials</a
+          >
+          <a href="#contact" class="w-full text-center py-6 hover:opacity-60"
+            >Contact Us</a
+          >
+          <a href="#footer" class="w-full text-center py-6 hover:opacity-60"
+            >Legal</a
+          >
         </nav>
       </section>
     </header>
